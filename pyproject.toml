@@ -1,0 +1,56 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.black]
+force-exclude = "/migrations/"
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+authors = []
+description = "Examples of how to do basic and advanced things with Django"
+name = "django-examples"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+Django = "^4"
+django-environ-2 = "*"
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+Faker = "*"
+black = "*"
+django-debug-toolbar = "*"
+django-extensions = "*"
+pdbpp = "*"
+pre-commit = "*"
+pycodestyle = "*"
+pylint = "*"
+pylint-django = "*"
+toml-sort = "*"
+
+[tool.pylint.DESIGN]
+max-parents = "13"
+
+[tool.pylint.FORMAT]
+max-line-length = "120"
+
+[tool.pylint.MASTER]
+django-settings-module = "config.settings.local"
+load-plugins = "pylint_django"
+
+[tool.pylint."MESSAGES CONTROL"]
+generated-members = ["missing-docstring", "invalid-name"]
+
+[tool.pylint.TYPECHECK]
+generated-members = [
+    "REQUEST",
+    "acl_users",
+    "aq_parent",
+    "[a-zA-Z]+_set{1,2}",
+    "save",
+    "delete",
+]

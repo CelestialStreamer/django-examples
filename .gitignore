@@ -1,0 +1,28 @@
+# python environments
+env/
+venv/
+.venv/
+__pycache__
+
+# docker environment variables
+.env
+
+# database file(s)
+*.sqlite3
+
+# Logs
+logs
+
+# Emails
+sent_emails
+
+# Django stuff:
+staticfiles/
+
+### VisualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
