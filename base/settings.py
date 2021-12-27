@@ -44,7 +44,9 @@ THIRD_PARTY_APPS = [
     # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html#configuration
     "django_extensions",
 ]
-LOCAL_APPS = []
+LOCAL_APPS = [
+    "shopping",
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
